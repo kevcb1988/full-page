@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100;
     width: 100%;
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 3%;
 }
 
 
@@ -55,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    font-size: 19px;
-    color: #c2c2c2;
+    font-size: 16px;
+    color: #bdbcbc;
 }
 
 .menuPrincipal li.active{
@@ -79,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #fp-nav ul li a span{
     background: orange;
+    display: none;
 }
 
 #fp-nav ul li .fp-tooltip{
@@ -208,13 +209,22 @@ h1, h2, h3, h4, h5, h6 {
     border-color: transparent transparent transparent #000;
 }
 
+.fp-slidesNav{
+    display: flex;
+    justify-content: center;
+}
+
+.fp-slidesNav ul li a span{
+    background: orange;
+}
+
 /*=============================================
 =                   Footer                   =
 =============================================*/
 
 .footer h2{
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 36px;
     letter-spacing: 1px;
     margin-bottom: 40px;
     font-family: 'Oswald'serif;
@@ -224,18 +234,68 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     margin: 0;
-    font-size: 50px;
+    font-size: 36px;
 }
 
 .footer__redes-sociales a{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     background: #fff;
     color: #30313a;
     text-decoration: none;
     align-items: center;
     justify-content: center;
-    border-radius: 100px;
+    border-radius: 50%;
     margin: 0 20px;
+}
+
+.footer__redes-sociales .facebook i { color: #3b5998}
+.footer__redes-sociales .twitter i { color: #1da1f2}
+.footer__redes-sociales .instagram i { color: #c13584}
+
+.footer__redes-sociales .facebook:hover{ background: #3b5998;}
+.footer__redes-sociales .twitter:hover { background: #1da1f2}
+.footer__redes-sociales .instagram:hover { background: #c13584}
+
+.footer__redes-sociales .facebook:hover i { color: #fff;}
+.footer__redes-sociales .twitter:hover i { color: #fff}
+.footer__redes-sociales .instagram:hover i { color: #fff}
+
+/*=============================================
+=                   Responsive                =
+=============================================*/
+
+@media (max-width: 576px){
+    
+    .menuPrincipal li,
+    .menuPrincipal a{
+        font-size: 14px;
+    }
+
+    .info__producto{
+        position: absolute;
+        bottom: 10%;
+    }
+
+    .header__titulo{
+        font-size: 50px;
+    }
+
+    .footer h2{
+        font-size: 22px;
+        width: 80%;
+        margin: 0 auto 40px auto;
+    }
+
+    .footer__redes-sociales{
+        font-size: 24px;
+    }
+    
+    .footer__redes-sociales a{
+        width: 50px;
+        height: 50px;
+        margin: 0 10px;
+    }
+    
 }
